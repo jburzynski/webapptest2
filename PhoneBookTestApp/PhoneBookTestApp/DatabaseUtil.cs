@@ -5,7 +5,7 @@ namespace PhoneBookTestApp
 {
     public class DatabaseUtil
     {
-        public static void initializeDatabase()
+        public static void InitializeDatabase()
         {
             var dbConnection = new SQLiteConnection("Data Source= MyDatabase.sqlite;Version=3;");
             dbConnection.Open();

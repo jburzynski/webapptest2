@@ -7,7 +7,7 @@
             throw new System.NotImplementedException();
         }
 
-        public Person findPerson()
+        public Person FindPerson(string firstName, string lastName)
         {
             throw new System.NotImplementedException();
         }

@@ -2,8 +2,8 @@
 {
     public class Person
     {
-        public string name;
-        public string phoneNumber;
-        public string address;
+        public string Name;
+        public string PhoneNumber;
+        public string Address;
     }
 }
