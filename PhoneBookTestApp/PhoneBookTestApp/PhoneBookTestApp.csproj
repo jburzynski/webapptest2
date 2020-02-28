@@ -78,10 +78,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseUtil.cs" />
-    <Compile Include="IPhoneBook.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="PhoneBook.cs" />
+    <Compile Include="Business\IPhoneBook.cs" />
+    <Compile Include="Business\IPhoneBookService.cs" />
+    <Compile Include="Business\PhoneBook.cs" />
+    <Compile Include="Business\PhoneBookService.cs" />
+    <Compile Include="Data\DatabaseUtil.cs" />
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\Person.cs" />
+    <Compile Include="Data\PersonRepository.cs" />
+    <Compile Include="DependencyInjection\Container.cs" />
+    <Compile Include="DependencyInjection\IContainer.cs" />
     <Compile Include="Tests\PhoneBookTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

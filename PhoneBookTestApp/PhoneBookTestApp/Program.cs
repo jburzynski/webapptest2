@@ -4,18 +4,22 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhoneBookTestApp.Business;
+using PhoneBookTestApp.DependencyInjection;
 
 namespace PhoneBookTestApp
 {
     class Program
     {
-        private static readonly IPhoneBook phoneBook = new PhoneBook();
-        
         public static void Main(string[] args)
         {
             try
             {
                 DatabaseUtil.InitializeDatabase();
+
+                var container = new Container();
+                var phoneBookService = container.Get<IPhoneBookService>();
+                IPhoneBook phoneBook = phoneBookService.GetPhoneBook();
                 
                 /* create person objects and put them in the PhoneBook and database
                 * John Smith, (248) 123-4567, 1234 Sand Hill Dr, Royal Oak, MI
@@ -45,16 +49,16 @@ namespace PhoneBookTestApp
                 /* spacing */ Console.WriteLine(); Console.WriteLine();
 
                 
-                // TODO: insert the new person objects into the database
+                // insert the new person objects into the database
+
+                var personRepository = container.Get<IRepository<Person>>();
+                personRepository.Add(new[] { john, cynthia });
 
             }
             finally
             {
                 DatabaseUtil.CleanUp();
             }
-
-            Console.WriteLine("Press any key to exit");
-            Console.ReadLine();
         }
     }
 }

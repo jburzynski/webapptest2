@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using PhoneBookTestApp;
+using PhoneBookTestApp.Business;
 
 namespace PhoneBookTestAppTests
 {
