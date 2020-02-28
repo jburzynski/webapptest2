@@ -7,12 +7,11 @@ namespace PhoneBookTestApp
     {
         public static void InitializeDatabase()
         {
-            var dbConnection = new SQLiteConnection("Data Source= MyDatabase.sqlite;Version=3;");
-            dbConnection.Open();
+            SQLiteConnection dbConnection = GetConnection();
 
             try
             {
-                SQLiteCommand command =
+                var command =
                     new SQLiteCommand(
                         "create table PHONEBOOK (NAME varchar(255), PHONENUMBER varchar(255), ADDRESS varchar(255))",
                         dbConnection);
@@ -31,17 +30,13 @@ namespace PhoneBookTestApp
                 command.ExecuteNonQuery();
 
             }
-            catch (Exception)
-            {
-                throw;
-            }
             finally
             {
                 dbConnection.Close();
             }
         }
 
-        public static SQLiteConnection GetConnection()
+        private static SQLiteConnection GetConnection()
         {
             var dbConnection = new SQLiteConnection("Data Source= MyDatabase.sqlite;Version=3;");
             dbConnection.Open();
@@ -51,20 +46,15 @@ namespace PhoneBookTestApp
 
         public static void CleanUp()
         {
-            var dbConnection = new SQLiteConnection("Data Source= MyDatabase.sqlite;Version=3;");
-            dbConnection.Open();
+            SQLiteConnection dbConnection = GetConnection();
 
             try
             {
-                SQLiteCommand command =
+                var command =
                     new SQLiteCommand(
                         "drop table PHONEBOOK",
                         dbConnection);
                 command.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-                throw;
             }
             finally
             {

@@ -2,8 +2,8 @@
 {
     public class Person
     {
-        public string Name;
-        public string PhoneNumber;
-        public string Address;
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Address { get; set; }
     }
 }
