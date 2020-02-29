@@ -1,4 +1,4 @@
-﻿using PhoneBookTestApp.Business.Models;
+﻿using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestApp.Business
 {

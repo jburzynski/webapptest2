@@ -1,6 +1,6 @@
 ﻿using PhoneBookTestApp.Business;
-using PhoneBookTestApp.Business.Models;
 using PhoneBookTestApp.Data;
+using PhoneBookTestApp.Data.Models;
 using SimpleInjector;
 
 namespace PhoneBookTestApp.DependencyInjection

@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using PhoneBookTestApp.Business.Models;
+using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestAppTests.Business.Models
 {

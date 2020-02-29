@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using PhoneBookTestApp.Business.Models;
+using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestApp.Data
 {

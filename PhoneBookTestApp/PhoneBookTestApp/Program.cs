@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PhoneBookTestApp.Business;
-using PhoneBookTestApp.Business.Models;
+using PhoneBookTestApp.Data.Models;
 using PhoneBookTestApp.DependencyInjection;
 using SimpleInjector;
 

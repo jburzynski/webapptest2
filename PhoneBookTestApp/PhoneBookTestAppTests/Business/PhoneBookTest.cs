@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using PhoneBookTestApp;
 using PhoneBookTestApp.Business;
-using PhoneBookTestApp.Business.Models;
+using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestAppTests.Business
 {

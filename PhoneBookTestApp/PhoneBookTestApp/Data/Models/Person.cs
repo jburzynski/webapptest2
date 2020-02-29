@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PhoneBookTestApp.Business.Models
+namespace PhoneBookTestApp.Data.Models
 {
     [Table("PHONEBOOK")]
     public class Person

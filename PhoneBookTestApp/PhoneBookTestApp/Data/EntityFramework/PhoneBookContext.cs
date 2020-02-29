@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using PhoneBookTestApp.Business.Models;
+using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestApp.Data.EntityFramework
 {

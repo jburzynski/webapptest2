@@ -2,8 +2,8 @@
 using System.Linq;
 using NUnit.Framework;
 using PhoneBookTestApp;
-using PhoneBookTestApp.Business.Models;
 using PhoneBookTestApp.Data.EntityFramework;
+using PhoneBookTestApp.Data.Models;
 
 namespace PhoneBookTestAppTests.Data.EntityFramework
 {
