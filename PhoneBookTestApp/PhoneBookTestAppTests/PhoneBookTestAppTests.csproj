@@ -63,6 +63,8 @@
     <Compile Include="Business\Models\PersonTest.cs" />
     <Compile Include="Business\PhoneBookServiceTest.cs" />
     <Compile Include="Business\PhoneBookTest.cs" />
+    <Compile Include="Data\EntityFramework\PersonRepositoryTest.cs" />
+    <Compile Include="Data\PersonRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

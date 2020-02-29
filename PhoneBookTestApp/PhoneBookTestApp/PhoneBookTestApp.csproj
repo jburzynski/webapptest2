@@ -55,6 +55,10 @@
       <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SimpleInjector, Version=4.9.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99">
+      <HintPath>..\packages\SimpleInjector.4.9.0\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -88,8 +92,7 @@
     <Compile Include="Data\EntityFramework\PhoneBookContext.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\PersonRepository.cs" />
-    <Compile Include="DependencyInjection\Container.cs" />
-    <Compile Include="DependencyInjection\IContainer.cs" />
+    <Compile Include="DependencyInjection\DiConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

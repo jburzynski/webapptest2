@@ -24,7 +24,7 @@ namespace PhoneBookTestAppTests.Business.Models
             string actual = person.ToString();
             
             //assert
-            Assert.AreEqual(expected, actual);
+            Assert.That(expected, Is.EqualTo(actual));
         }
     }
 }

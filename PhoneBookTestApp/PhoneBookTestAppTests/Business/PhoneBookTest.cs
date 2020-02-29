@@ -43,7 +43,7 @@ namespace PhoneBookTestAppTests.Business
             Person actual = _phoneBook.FindPerson(firstName, lastName);
             
             //assert
-            Assert.IsNull(actual);
+            Assert.That(actual, Is.Null);
         }
         
         [Test]
@@ -59,7 +59,7 @@ namespace PhoneBookTestAppTests.Business
             Person actual = _phoneBook.FindPerson(firstName, lastName);
             
             //assert
-            Assert.AreSame(expected, actual);
+            Assert.That(expected, Is.SameAs(actual));
         }
         
         [Test]
@@ -90,7 +90,7 @@ namespace PhoneBookTestAppTests.Business
             string actual = _phoneBook.ToString();
             
             //assert
-            Assert.AreEqual(expected, actual);
+            Assert.That(expected, Is.EqualTo(actual));
         }
     }
 }

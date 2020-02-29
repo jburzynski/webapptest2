@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PhoneBookTestApp.Business;
 using PhoneBookTestApp.Business.Models;
 using PhoneBookTestApp.DependencyInjection;
+using SimpleInjector;
 
 namespace PhoneBookTestApp
 {
@@ -18,8 +19,8 @@ namespace PhoneBookTestApp
             {
                 DatabaseUtil.InitializeDatabase();
 
-                var container = new Container();
-                var phoneBookService = container.Get<IPhoneBookService>();
+                Container container = new DiConfig().GetContainer();
+                var phoneBookService = container.GetInstance<IPhoneBookService>();
                 IPhoneBook phoneBook = phoneBookService.GetPhoneBook();
                 
                 /* create person objects and put them in the PhoneBook and database
@@ -52,7 +53,7 @@ namespace PhoneBookTestApp
                 
                 // insert the new person objects into the database
 
-                var personRepository = container.Get<IRepository<Person>>();
+                var personRepository = container.GetInstance<IRepository<Person>>();
                 personRepository.Add(new[] { john, cynthia });
 
             }

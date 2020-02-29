@@ -31,7 +31,7 @@ namespace PhoneBookTestAppTests.Business
             Person actual = phoneBook.FindPerson("A", "B");
 
             //assert
-            Assert.AreSame(expected, actual);
+            Assert.That(expected, Is.SameAs(actual));
         }
     }
 }
