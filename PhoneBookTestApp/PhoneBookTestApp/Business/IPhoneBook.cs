@@ -1,4 +1,6 @@
-﻿namespace PhoneBookTestApp.Business
+﻿using PhoneBookTestApp.Business.Models;
+
+namespace PhoneBookTestApp.Business
 {
     public interface IPhoneBook
     {

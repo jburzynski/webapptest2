@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using PhoneBookTestApp.Business.Models;
 
 namespace PhoneBookTestApp.Data
 {
+    /**
+     * This class shows one way to operate on the database (using SQLite commands).
+     * There is another implementation of the same functionality using EntityFramework in PhoneBookTestApp.Data.EntityFramework.PersonRepository.
+     * Either of the repository classes can be used as an IRepository<Person> in this application, without affecting any results.
+     */
     public class PersonRepository : IRepository<Person>
     {
         public void Add(IEnumerable<Person> entities)

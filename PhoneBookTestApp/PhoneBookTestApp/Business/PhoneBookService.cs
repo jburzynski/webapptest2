@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using PhoneBookTestApp.Business.Models;
 
 namespace PhoneBookTestApp.Business
 {
