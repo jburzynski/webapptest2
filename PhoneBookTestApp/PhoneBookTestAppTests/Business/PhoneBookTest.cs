@@ -61,5 +61,36 @@ namespace PhoneBookTestAppTests.Business
             //assert
             Assert.AreSame(expected, actual);
         }
+        
+        [Test]
+        public void ToString_Test()
+        {
+            //arrange
+
+            string expected = $"A B, C D, E F{Environment.NewLine}G H, I J, K L{Environment.NewLine}";
+            
+            var person1 = new Person
+            {
+                Name = "A B",
+                PhoneNumber = "C D",
+                Address = "E F"
+            };
+            
+            var person2 = new Person
+            {
+                Name = "G H",
+                PhoneNumber = "I J",
+                Address = "K L"
+            };
+            
+            _phoneBook.AddPerson(person1);
+            _phoneBook.AddPerson(person2);
+            
+            //act
+            string actual = _phoneBook.ToString();
+            
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
